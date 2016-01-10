@@ -1,11 +1,12 @@
-shoplist = ['apple','mango', 'potato', 'banana']
+shoplist = ['apple', 'mango', 'potato', 'banana']
 
 print ('I have {} items to purchase'.format(len(shoplist)))
 
+
 def print_shoplist():
-	for item in shoplist:
-		print (item, end = " ") 
-		# This 'end = " "' part makes list in one line
+    for item in shoplist:
+        print (item, end = " ")
+        # This 'end = " "' part makes list in one line
 
 print ('\nThese items are:')
 print_shoplist()
