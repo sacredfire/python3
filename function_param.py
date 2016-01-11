@@ -1,10 +1,10 @@
 def print_max(a, b):
     if a > b:
-        print (a, 'is more than', b)
+        print(a, 'is more than', b)
     elif a == b:
-        print (a, 'is equal to', b)
+        print(a, 'is equal to', b)
     else:
-        print (b, 'is more than', a)
+        print(b, 'is more than', a)
 
 # directly pass literal value
 print_max(3873773, 994994994)

@@ -5,11 +5,11 @@ def print_max(x, y):
     x = int(x)
     y = int(y)
     if x < y:
-        print (x)
+        print(x)
     elif x == y:
-        print ('Numbers are equal')
+        print('Numbers are equal')
     else:
-        print (y)
+        print(y)
 
 print_max(3, 6)
-print (print_max.__doc__)
+print(print_max.__doc__)

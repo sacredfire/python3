@@ -25,4 +25,4 @@ kolya = jane
 print(kolya)
 
 word = "apricot"
-print (word)
+print(word)

@@ -6,8 +6,8 @@ def maximum(x, y):
     else:
         return y
 
-print (maximum(100, 500))
-print (maximum(600, 600))
+print(maximum(100, 500))
+print(maximum(600, 600))
 
-print (max(50, 50))
-print (max(50, 51))
+print(max(50, 50))
+print(max(50, 51))
