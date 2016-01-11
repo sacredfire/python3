@@ -20,17 +20,17 @@ print (string1.format(str(age), name1))
 
 # table formatting
 for i in range(1, 11):
-	print('{:2d} {:3d} {:4d}'.format(i, i*i, i*i*i))
+    print('{:2d} {:3d} {:4d}'.format(i, i*i, i*i*i))
 
 # decimal (.) precision of 3 for float '0.333'
 print ('{:.3f}'.format(1/3))
-# fill with underscores (_) with the text centered 
+# fill with underscores (_) with the text centered
 # (^) to 11 width '___hello___'
 print ('{0:_^20}'.format('Hi!'))
 # keyword-based 'Jonny got a gun' and use of escape sequence
-print('{name}\'s got a {thing}'.format(name = 'Jonny', thing = 'gun'))
+print('{name}\'s got a {thing}'.format(name='Jonny', thing='gun'))
 
-# raw string 
+# raw string
 print(r'Newlines are indicated by \n')
-# equivalent to 
+# equivalent to
 print('Newlines are indicated by \\n')
