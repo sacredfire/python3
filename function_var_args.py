@@ -15,3 +15,5 @@ def some():
     # pass statement indicates the empty block of statements
     pass
 print(some())
+
+print(total())

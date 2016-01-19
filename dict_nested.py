@@ -1,6 +1,6 @@
 d = {}
 d['dict1'] = {}
-d['dict1']['innerkay'] = 'value'
+d['dict1']['innerkey'] = 'value'
 print(d)
 
 # entry1 = {'name': 'Sergei',
