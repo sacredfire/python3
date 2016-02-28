@@ -1,7 +1,6 @@
 import os
 import time
 import zipfile
-import glob
 
 source = '/Users/Sergei_KIssel/Dropbox/DOCS'
 target_dir = '/Users/Sergei_KIssel/python3/backup_DOCS'
@@ -37,9 +36,9 @@ modes = {zipfile.ZIP_DEFLATED: 'deflated',
          zipfile.ZIP_STORED: 'stored'}
 
 
-def recursive_zip(zf, source, target_dir):
+def recursive_zip(zf, source_file_path, archived_file_path):
 
-    for item in glob.glob(source + os.sep + '*'):
+    for item in os.listdir(source):
         if os.path.isfile(os.path.join(source, item)):
             zf.write(os.path.join(source, item), os.path.basename(
                 item), compress_type=compression)
@@ -58,8 +57,3 @@ try:
 finally:
     print('closing')
     zf.close()
-
-# Open zip to see what's in it
-zf = zipfile.ZipFile(target, mode='r')
-for info in zf.infolist():
-    print(info.filename, info.date_time, info.file_size, info.compress_size)

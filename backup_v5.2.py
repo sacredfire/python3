@@ -37,7 +37,7 @@ modes = {zipfile.ZIP_DEFLATED: 'deflated',
          zipfile.ZIP_STORED: 'stored'}
 
 
-def recursive_zip(zf, source, target_dir):
+def recursive_zip(zf, source_file_path, archived_file_path):
 
     for item in glob.glob(source + os.sep + '*'):
 
