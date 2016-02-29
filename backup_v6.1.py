@@ -39,7 +39,7 @@ modes = {zipfile.ZIP_DEFLATED: 'deflated',
 
 # Define recursive zip
 def recursive_zip(zf, source_file_path, archived_file_path):
-    
+
     for root, dirs, files in os.walk(source):
         for file in files:
             zf.write(os.path.join(root, file), compress_type=compression)
@@ -49,11 +49,11 @@ try:
     print('adding files from {} with compression mode {}'.format(
           source, modes[compression]))
 
-# # This is a check not to execute *.py files ???
-#     if __name__ == '__main__':
+# This is a check not to execute *.py files ???
+    if __name__ == '__main__':
 
-    # Calling the recursive_zip func defined above
-    recursive_zip(zf, source, target_dir)
+        # Calling the recursive_zip func defined above
+        recursive_zip(zf, source, target_dir)
 
 finally:
     print('closing')
