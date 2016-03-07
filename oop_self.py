@@ -8,7 +8,11 @@ class Bank():
 x = Bank()
 
 x.create_atm()
-# x.create_atm() == Bank.create_atm(x)
+
+# if x.create_atm() == Bank.create_atm(x):
+#     print('x.create_atm() == Bank.create_atm(x)')
+# else:
+#     print('x.create_atm() != Bank.create_atm(x)')
 # myobject.method(arg1, arg2) == MyClass.method(myobject, arg1, arg2)
 
 
@@ -35,3 +39,6 @@ print(Restaurant().bunkrupt)
 c = Restaurant()
 
 print(c.bunkrupt)
+
+c.open_branch()
+
