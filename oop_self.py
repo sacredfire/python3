@@ -41,4 +41,3 @@ c = Restaurant()
 print(c.bunkrupt)
 
 c.open_branch()
-
