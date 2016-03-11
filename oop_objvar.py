@@ -31,9 +31,23 @@ class Robot:
         Yeah, they can do that."""
         print('Greetings, my master call my ass {}'.format(self.name))
 
-        @classmethod
-        def how_many(cls):
-            """Prints the current population"""
-            print('We have {:d} robots'.format(cls.population))
+    @classmethod
+    def how_many(cls):
+        """Prints the current population"""
+        print('We have {:d} robots'.format(cls.population))
 
 droid1 = Robot("R2-D2")
+droid2 = Robot("C3-PO")
+
+droid1.say_hi()
+droid2.say_hi()
+
+Robot.how_many()
+
+print('Let\'s kill one')
+droid1.die()
+
+print('Let\'s kill the other one')
+droid2.die()
+
+Robot.how_many()
