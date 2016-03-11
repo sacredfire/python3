@@ -31,6 +31,9 @@ class Robot:
         Yeah, they can do that."""
         print('Greetings, my master call my ass {}'.format(self.name))
 
+# Decorators can be imagined to be a shortcut to calling a wrapper function, so
+# applying the @classmethod decorator is same as calling:
+# how_many = classmethod(how_many)
     @classmethod
     def how_many(cls):
         """Prints the current population"""
@@ -51,3 +54,17 @@ print('Let\'s kill the other one')
 droid2.die()
 
 Robot.how_many()
+
+# Here, population belongs to the Robot class and hence is a class variable.
+# The name variable belongs to the object (it is assigned using self ) and
+# hence is an object variable.
+
+# Thus, we refer to the population class variable as Robot.population and not
+# as self.population . We refer to the object variable name using self.name
+# notation in the methods of that object.
+
+# Also note that an object variable with the same name as a class variable will
+# hide the class variable!
+
+# Instead of Robot.population we could have also used self.__class__.population
+# because every object refers to it’s class via the self.__class__ attribute.
