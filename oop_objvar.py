@@ -17,19 +17,24 @@ class Robot:
         """I'm dying."""
         print('{} is being distoyed!'.format(self.name))
 
+        self.name = 'dead robot'
+
         Robot.population -= 1
 
         if Robot.population == 0:
             print('No more Robots! {} was the last one.'.format(self.name))
         else:
-            print('There are still {:d} robots working'
+            print('There are still {:d} robot(s) working'
                   .format(Robot.population))
 
     def say_hi(self):
         """Greeting by the robot.
 
         Yeah, they can do that."""
-        print('Greetings, my master call my ass {}'.format(self.name))
+        if Robot.population == 0:
+            print('No more Robots left!')
+        else:
+            print('Greetings, my master call my ass {}'.format(self.name))
 
 # Decorators can be imagined to be a shortcut to calling a wrapper function, so
 # applying the @classmethod decorator is same as calling:
@@ -37,7 +42,15 @@ class Robot:
     @classmethod
     def how_many(cls):
         """Prints the current population"""
-        print('We have {:d} robots'.format(cls.population))
+        print('We have {:d} robot(s)'.format(cls.population))
+
+    @classmethod
+    def kill_em_all(cls):
+        """Kills all droid population"""
+        print('All Robot(s) are being distoyed!')
+
+        Robot.population = 0
+
 
 droid1 = Robot("R2-D2")
 droid2 = Robot("C3-PO")
@@ -53,7 +66,13 @@ droid1.die()
 print('Let\'s kill the other one')
 droid2.die()
 
+print('Let\'s kill \'em all now!')
+Robot.kill_em_all()
+
 Robot.how_many()
+
+droid1.say_hi()
+droid2.say_hi()
 
 # Here, population belongs to the Robot class and hence is a class variable.
 # The name variable belongs to the object (it is assigned using self ) and
