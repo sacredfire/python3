@@ -1,3 +1,6 @@
+stock_prices_yesterday = [10, 7, 5, 8, 11, 9]
+
+
 def get_max_profit(stock_prices_yesterday):
 
     max_profit = 0
@@ -16,3 +19,6 @@ def get_max_profit(stock_prices_yesterday):
             max_profit = max(max_profit, potential_profit)
 
     return max_profit
+
+mp = get_max_profit(stock_prices_yesterday)
+print(mp)
