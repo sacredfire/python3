@@ -8,14 +8,20 @@ class SchoolMember:
 
     def tell(self):
         '''Tells details'''
-        print('Name: {} Age: {}'.format(self.name, self.age))
+        print('Name: {} Age: {}'.format(self.name, self.age)),
+        # The trailing comma is used not to print new line
 
 
 class Teacher(SchoolMember):
     '''Represents teacher'''
 
     def __init__(self, name, age, salary):
+        # Init method of the base class is explicitly called using the self
+        # variable so that we can initialize the base class part of the object.
+        # Python does not automatically call the constructor of the base class
         SchoolMember.__init__(self, name, age)
+        # we call methods of the base class by prefixing the class name to the
+        # ethod call and then pass in the self variable along with any args.
         self.salary = salary
         print('Initialized Teacher: {}'.format(self.name))
 
