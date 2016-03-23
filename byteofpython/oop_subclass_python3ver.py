@@ -8,8 +8,8 @@ class SchoolMember(object):
 
     def tell(self):
         '''Tells details'''
-        print('Name: {} Age: {}'.format(self.name, self.age)),
-        # The trailing comma is used not to print new line
+        print('Name: {} Age: {}'.format(self.name, self.age), end=' ')
+        # 'end' keyword with ' ' parameter has to be used instead of trailing ,
 
 
 class Teacher(SchoolMember):
@@ -51,3 +51,5 @@ print()
 members = [t, s]
 for member in members:
     member.tell()
+
+print()
