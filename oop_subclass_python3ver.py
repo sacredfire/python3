@@ -18,7 +18,7 @@ class Teacher(SchoolMember):
     def __init__(self, name, age, salary):
         #
         #
-        #
+        # This is compatible with Python 2.x
         super(Teacher, self).__init__(name, age)
         #
         #
@@ -34,7 +34,8 @@ class Student(SchoolMember):
     '''Represents student'''
 
     def __init__(self, name, age, grade):
-        SchoolMember.__init__(self, name, age)
+        # Using 'super' method like this is incopatible with Python 2.x!
+        super().__init__(name, age)
         self.grade = grade
         print('Initialized Student: {}'.format(self.name))
 
