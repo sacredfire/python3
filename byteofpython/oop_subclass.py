@@ -34,6 +34,7 @@ class Student(SchoolMember):
     '''Represents student'''
 
     def __init__(self, name, age, grade):
+        #
         SchoolMember.__init__(self, name, age)
         self.grade = grade
         print('Initialized Student: {}'.format(self.name))
