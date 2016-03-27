@@ -45,10 +45,11 @@ class Student(SchoolMember):
 
 t = Teacher('Mrs. Olivia Stoned', 40, 40000)
 s = Student('Michel Foo', 17, 5)
+v = Student('Vasya Pupkin', 15, 87)
 
 print()
 
-members = [t, s]
+members = [t, s, v]
 for member in members:
     member.tell()
 
