@@ -1,4 +1,4 @@
-class Car():
+class Car(object):
     """A simple attempt to represent a car."""
 
     def __init__(self, make, model, year):
@@ -12,7 +12,7 @@ class Car():
         return long_name.title()
 
     def read_odometer(self):
-        print("This car has " + str(self.odometer_reading) + " miles on it.")
+        print("This car has {} miles on it.".format(self.odometer_reading))
 
     def update_odometer(self, mileage):
         if mileage >= self.odometer_reading:
@@ -22,3 +22,19 @@ class Car():
 
     def increment_odometer(self, miles):
         self.odometer_reading += miles
+
+c = Car('audi', 'A8', 2008)
+
+print(c.get_descriptive_name())
+
+c.update_odometer(12333.50)
+
+c.read_odometer()
+
+c.update_odometer(12000)
+
+c.read_odometer()
+
+c.increment_odometer(333.5)
+
+c.read_odometer()
