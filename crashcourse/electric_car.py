@@ -12,7 +12,8 @@ class Car(object):
         return long_name.title()
 
     def read_odometer(self):
-        print("This car has {} miles on it.".format(self.odometer_reading))
+        print("\n {} {} has {} miles on it.".format(
+            self.make.title(), self.model.title(), self.odometer_reading))
 
     def update_odometer(self, mileage):
         if mileage >= self.odometer_reading:
@@ -23,9 +24,20 @@ class Car(object):
     def increment_odometer(self, miles):
         self.odometer_reading += miles
 
-c = Car('audi', 'A8', 2008)
+
+class ElecricCar(Car):
+    """Child class that represents aspects specific to electric vehicles"""
+
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+
+c = Car('audi', 'a5', 2011)
+
+e = ElecricCar('Tesla', 'model3', 2016)
 
 print(c.get_descriptive_name())
+
+print(e.get_descriptive_name())
 
 c.update_odometer(12333.50)
 
@@ -38,3 +50,13 @@ c.read_odometer()
 c.increment_odometer(333.5)
 
 c.read_odometer()
+
+# Modifying an Attribute’s Value Directly
+c.odometer_reading = 30100
+
+c.read_odometer()
+
+# Calling ElectricCar class instance here
+e.update_odometer(123.7)
+
+e.read_odometer()
