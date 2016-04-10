@@ -12,7 +12,7 @@ class Car(object):
         return long_name.title()
 
     def read_odometer(self):
-        print("\n {} {} has {} miles on it.".format(
+        print("\n{} {} has {} miles on it.".format(
             self.make.title(), self.model.title(), self.odometer_reading))
 
     def update_odometer(self, mileage):
@@ -30,6 +30,16 @@ class ElecricCar(Car):
 
     def __init__(self, make, model, year):
         super().__init__(make, model, year)
+        """
+        Initialized attributes of the parent class.
+        Then initialize attributes specific to an electric car.
+        """
+        self.batery_size = 70
+
+    def about_battery(self):
+        """Prints statement about batery size"""
+        print("{}'s batery size is {:d} kWh".format(self.model, self.batery_size))
+
 
 c = Car('audi', 'a5', 2011)
 
@@ -60,3 +70,5 @@ c.read_odometer()
 e.update_odometer(123.7)
 
 e.read_odometer()
+
+e.about_battery()

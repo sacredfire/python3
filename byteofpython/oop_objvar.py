@@ -15,16 +15,17 @@ class Robot:
 
     def die(self):
         """I'm dying."""
+        print('\nLet\'s kill one')
         print('{} is being distoyed!'.format(self.name))
 
-        self.name = 'dead robot'
+        # self.name = 'dead robot'
 
         Robot.population -= 1
 
         if Robot.population == 0:
-            print('No more Robots! {} was the last one.'.format(self.name))
+            print('\nNo more Robots! {} was the last one.'.format(self.name))
         else:
-            print('There are still {:d} robot(s) working'
+            print('\nThere are still {:d} robot(s) working'
                   .format(Robot.population))
 
     def say_hi(self):
@@ -42,7 +43,7 @@ class Robot:
     @classmethod
     def how_many(cls):
         """Prints the current population"""
-        print('We have {:d} robot(s)'.format(cls.population))
+        print('\nWe have {:d} robot(s)'.format(cls.population))
 
     @classmethod
     def kill_em_all(cls):
@@ -60,19 +61,18 @@ droid2.say_hi()
 
 Robot.how_many()
 
-print('Let\'s kill one')
+
 droid1.die()
 
-print('Let\'s kill the other one')
 droid2.die()
 
-print('Let\'s kill \'em all now!')
-Robot.kill_em_all()
+# print('Let\'s kill \'em all now!')
+# Robot.kill_em_all()
 
 Robot.how_many()
 
-droid1.say_hi()
-droid2.say_hi()
+# droid1.say_hi()
+# droid2.say_hi()
 
 # Here, population belongs to the Robot class and hence is a class variable.
 # The name variable belongs to the object (it is assigned using self ) and
