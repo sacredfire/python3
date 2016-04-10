@@ -4,7 +4,7 @@ class Restaurant(object):
     def __init__(self, name, cuisine):
         self.name = name
         self.cuisine = cuisine
-        self.num_served = 4
+        self.num_served = 0
         print("Opened restaurant {}".format(self.name))
 
     def describe(self):
@@ -31,14 +31,20 @@ class Restaurant(object):
         print("...more guests visiting")
         self.num_served += guests
 
-r = Restaurant("Titanic", "seafood")
+class IceCreamStand(Restaurant):
 
-r.describe()
+    def __init__(self, name, cuisine):
+        super().__init__(name, cuisine)
+        flavours = ('banana', 'strawberry', 'mango', 'apple', 'caramel')
+        self.flavours = flavours
 
-r.set_guests(67)
+    def list_flavours(self):
+        print("Availbale flavours are:")
+        # for flavour in self.flavours:
+        #     print(flavour)
 
-r.how_many_guests()
+        print(', '.join(str(flavour) for flavour in self.flavours))
 
-r.add_guests(33)
-
-r.how_many_guests()
+i = IceCreamStand("Snow white", "desets")
+i.describe()
+i.list_flavours()
