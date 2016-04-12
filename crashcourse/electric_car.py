@@ -34,8 +34,8 @@ class Car(object):
                   format(self.make.title(), self.model.title(), self.gallons))
         else:
             self.gallons = 25
-            print("Can fill over tank's capacity. {} {} filled with {:.1f} gallons\n"
-                  .format(self.make.title(), self.model.title(), self.gallons))
+            print("Can fill over tank's capacity. {} {} filled with {:.1f} gallons\n".
+                  format(self.make.title(), self.model.title(), self.gallons))
 
 
 class ElecricCar(Car):
@@ -68,10 +68,37 @@ class Battery(object):
             print("This car's battery size is {} kWh".
                   format(self.battery_size))
 
+    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+        else:
+            range = int(self.battery_size) * 3.23
+        print("Range is {} miles.".format(range))
+
+    def upgrade_bat(self):
+        print("Installing 85 kWh battery!")
+        if self.battery_size <= 1:
+            print("Can not fit this big ass battery in here!")
+        elif self.battery_size == 85:
+            pass
+        else:
+            self.battery_size = 85
+
 
 c = Car('audi', 'a5', 2011, 10)
 
 print(c.get_descriptive_name())
+
+c.battery.about_battery()
+
+c.battery.get_range()
+
+c.battery.upgrade_bat()
+
+c.battery.get_range()
 
 c.read_odometer()
 
@@ -89,10 +116,10 @@ c.increment_odometer(333.5)
 
 c.read_odometer()
 
-# # Modifying an Attribute’s Value Directly
-# c.odometer = 100.7
+# Modifying an Attribute’s Value Directly
+c.odometer = 100.7
 
-# c.read_odometer()
+c.read_odometer()
 
 c.fill_gastank(30)
 
@@ -112,5 +139,10 @@ e.fill_gastank(2)
 
 # When we want to describe the battery, we need to work through the car’s
 # battery attribute:
+e.battery.get_range()
 
+e.battery.upgrade_bat()
 
+e.battery.get_range()
+
+e.battery.about_battery()
