@@ -1,6 +1,6 @@
-from car import ElecricCar
+from electric_car import ElectricCar
 
-new_ecar = ElecricCar("tesla", "model s", 2016, 21)
+new_ecar = ElectricCar("tesla", "model s", 2016, 21)
 
 new_ecar.get_descriptive_name()
 
