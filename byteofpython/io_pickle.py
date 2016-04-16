@@ -1,7 +1,7 @@
 import pickle
 
 # The name of the file where we will store the object
-shoplistfile = 'phoplist.data'
+shoplistfile = 'shoplist.data'
 # List of things to buy
 shoplist = ['potato', 'onion', 'gasoline']
 
