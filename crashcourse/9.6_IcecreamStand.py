@@ -31,6 +31,7 @@ class Restaurant(object):
         print("...more guests visiting")
         self.num_served += guests
 
+
 class IceCreamStand(Restaurant):
 
     def __init__(self, name, cuisine):
