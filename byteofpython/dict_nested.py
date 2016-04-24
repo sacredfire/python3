@@ -8,19 +8,19 @@ person1 = {
            'surname': 'Kissel',
            'email': 'sergei.kissel@gmail.com',
            'tel': '+380919576297'
-           }
+            }
 
 person2 = {
            'name': 'Dmytro',
            'surname': 'Kissel',
            'email': 'exz.mdma@gmail.com',
            'tel': "+16514347900"
-           }
+            }
 
 params = {
           'me': person1,
           'bro': person2
-          }
+           }
 
 print(params)
 
