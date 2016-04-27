@@ -21,8 +21,8 @@ print('\n')
 not_comming = guest_list.pop(0)
 print('{} can not attend!'.format(not_comming.title()))
 
-print('These are the only guests left: {}'
-      .format(', '.join(str(p) for p in guest_list).title()))
+print('These are the only {:d} guests left: {}'
+      .format(len(guest_list), ', '.join(str(p) for p in guest_list).title()))
 
 print('\n')
 
@@ -49,8 +49,8 @@ guest_list.insert(2, 'tanya')
 print('Adding a person..')
 guest_list.append('ira')
 
-print('Now these people are comming: {}'
-      .format(', '.join(str(p) for p in guest_list).title()))
+print('Now all these people are comming: {}. \nIt\'s {:d} total!'
+      .format(', '.join(str(p) for p in guest_list).title(), len(guest_list)))
 
 # print(*guest_list)
 print('\n')
@@ -73,8 +73,8 @@ print('Removing a person..')
 removed4 = guest_list.pop(0)
 print('Sorry, {}'.format(removed4.title()))
 
-print('Now only these people are comming: {}'
-      .format(', '.join(str(p) for p in guest_list).title()))
+print('Now only {:d} people are comming: {}'
+      .format(len(guest_list), ', '.join(str(p) for p in guest_list).title()))
 
 print('\n')
 print('Removing the rest..')
