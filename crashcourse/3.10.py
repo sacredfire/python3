@@ -16,3 +16,5 @@ print(*trees)
 tr = sorted(trees)
 print(*tr)
 print(', '.join(str(t) for t in tr))
+
+print(len(trees))
