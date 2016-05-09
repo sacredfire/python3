@@ -3,7 +3,7 @@ import time
 import zipfile
 
 source = '/Users/macuser/Sync/important_docs/'
-target_dir = '/Users/macuser/Sync/'
+target_dir = '/Users/macusern/Sync/'
 
 
 if not os.path.exists(target_dir):
