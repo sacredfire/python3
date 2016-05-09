@@ -2,8 +2,8 @@ import os
 import time
 import zipfile
 
-source = '/Users/Sergei_KIssel/Dropbox/DOCS'
-target_dir = '/Users/Sergei_KIssel/python3/backup_DOCS'
+source = '/Users/macuser/Sync/important_docs/'
+target_dir = '/Users/macuser/Sync/'
 
 
 if not os.path.exists(target_dir):
