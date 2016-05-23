@@ -40,12 +40,12 @@ class IceCreamStand(Restaurant):
         self.flavours = flavours
 
     def list_flavours(self):
-        print("Availbale flavours are:")
+        print("Available flavours are:")
         # for flavour in self.flavours:
         #     print(flavour)
 
         print(', '.join(str(flavour) for flavour in self.flavours))
 
-i = IceCreamStand("Snow white", "desets")
+i = IceCreamStand("Snow white", "deserts")
 i.describe()
 i.list_flavours()
