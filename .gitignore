@@ -27,7 +27,8 @@ var/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+#  before PyInstaller builds the exe, so as to inject date/other infos 
+into it.
 *.manifest
 *.spec
 
@@ -51,6 +52,19 @@ coverage.xml
 
 # Django stuff:
 *.log
+*.egg-info
+*.pot
+*.py[co]
+__pycache__
+MANIFEST
+dist/
+docs/_build/
+docs/locale/
+node_modules/
+tests/coverage_html/
+tests/.coverage
+build/
+tests/report/
 
 # Sphinx documentation
 docs/_build/
