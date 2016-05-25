@@ -30,3 +30,8 @@ cubes_alt = []
 for value in range(1, 11):
     cubes_alt.append(value**3)
 print(*cubes_alt)
+
+cubes_alt = []
+for value in range(1, 11):
+    cubes_alt.append(value**3)
+print(*cubes_alt)
